@@ -19,10 +19,11 @@ module tt_um_lab2digitallogicq2 (
     wire[15:0] In={ui_in,uio_in};
     reg[7:0] C;
 
-    always @(In)
-      begin
-        if (In[15])
-          begin
+    always @(In) begin
+        if(In==16'b0000000000000000) begin 
+            C=8'b11110000;
+        end
+        else if(In[15]) begin
             if(In[14]) C=8'b00001110;
             else if(In[13]) C=8'b00001101;
             else if(In[12]) C=8'b00001100;
@@ -40,7 +41,9 @@ module tt_um_lab2digitallogicq2 (
             else if(In[0]) C=8'b00000000;
             else C=8'b11110000;
 
-          end
+        end
+        else begin
+            C=8'b00000000;
           
 
     end
