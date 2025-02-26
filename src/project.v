@@ -38,7 +38,7 @@ module tt_um_lab2digitallogicq2 user_project (
             else if(In[2]) C=8'b00000010;
             else if(In[1]) C=8'b00000001;
             else if(In[0]) C=8'b00000000;
-            else C=11110000;
+            else C=8'b11110000;
           
 
     end
