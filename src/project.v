@@ -21,32 +21,31 @@ module tt_um_lab2digitallogicq2 (
 
     always @(In)
       begin
-        if (In[15])==1
+        if (In[15])
           begin
-            if (In[14]) C==8'b00001110;
-            else if (In[13]) C==8'b00001101;
-            else if (In[12]) C==8'b00001100;
-            else if (In[11]) C==8'b00001011;
-            else if (In[10]) C==8'b00001010;
-            else if (In[9]) C==8'b00001001;
-            else if (In[8]) C==8'b00001000;
-            else if (In[7]) C==8'b00000111;
-            else if (In[6]) C==8'b00000110;
-            else if (In[5]) C==8'b00000101;
-            else if (In[4]) C==8'b00000100;
-            else if (In[3]) C==8'b00000011;
-            else if (In[2]) C==8'b00000010;
-            else if (In[1]) C==8'b00000001;
-            else if (In[0]) C==8'b00000000;
-            else
-            C=11110000;
+            if(In[14]) C=8'b00001110;
+            else if(In[13]) C=8'b00001101;
+            else if(In[12]) C=8'b00001100;
+            else if(In[11]) C=8'b00001011;
+            else if(In[10]) C=8'b00001010;
+            else if(In[9]) C=8'b00001001;
+            else if(In[8]) C=8'b00001000;
+            else if(In[7]) C=8'b00000111;
+            else if(In[6]) C=8'b00000110;
+            else if(In[5]) C=8'b00000101;
+            else if(In[4]) C=8'b00000100;
+            else if(In[3]) C=8'b00000011;
+            else if(In[2]) C=8'b00000010;
+            else if(In[1]) C=8'b00000001;
+            else if(In[0]) C=8'b00000000;
+            else C=11110000;
           
 
     end
 
     assign uo_out=C;
-    assign uio_oe=0
-    assign uio_out=0
+    assign uio_oe=0;
+    assign uio_out=0;
 
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
