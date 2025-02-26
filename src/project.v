@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-`default_nettype none
+
 
 module tt_um_lab2digitallogicq2 (
     input  wire [7:0] ui_in,    // Dedicated inputs
@@ -39,6 +39,8 @@ module tt_um_lab2digitallogicq2 (
             else if(In[1]) C=8'b00000001;
             else if(In[0]) C=8'b00000000;
             else C=8'b11110000;
+
+          end
           
 
     end
@@ -49,5 +51,4 @@ module tt_um_lab2digitallogicq2 (
 
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
-
 endmodule
